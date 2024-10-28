@@ -28,7 +28,7 @@ function afficherInput($champs) {
     $affichage = "";
     foreach ($champs as $value) {
         $case = "<label for='$value'>$value</label><br>
-                 <input type='text'><br>";
+                 <input type='text' id='$value' name='$value'><br>";
         $affichage .= $case;
     }
 return $affichage;  
