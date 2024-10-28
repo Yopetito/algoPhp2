@@ -9,19 +9,26 @@ alimenterListeDeroulante($elements);<br>
 
 <h2>Resultat</h2>
 
-<label for="civilites">Choisir votre civilité</label><br>
-
+<!-- 
 <select name="civil" id="civilites">
     <option value="Monsieur">Monsieur</option>
     <option value="Madame">Madame</option>
     <option value="Mademoisselle">Mademoisselle</option>
-</select>
+</select> -->
 
 <?php
 
 $elements = ["Monsieur","Madame","Mademoiselle"];
-alimenterListeDeroulante($elements);
+echo alimenterListeDeroulante($elements);
 
-function alimenterListeDeroulante($liste){
-
+function alimenterListeDeroulante($elements){
+    $label = "<label for='civilites'>Choisir votre civilité</label><br>";
+    $sel = "<select name='civilities' id='civilites'>";
+       
+    foreach ($elements as $civility){
+            $sel .= "<option value='$civility'>$civility</option>"; //fait les cases de la liste deroulante attribué a $sel 
+        }
+       
+$sel .= "</select>"; //comme dans la vidéo oublie pas de fermer certains balises encore ouverte.
+return $sel; 
 }
