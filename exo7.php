@@ -29,6 +29,7 @@ function genererCheckbox($elements){
     
     foreach ($elements as $label => $checkedStatus){
         $checkedAttribute = ($checkedStatus === "checked") ? 'checked' : ''; // Si $checkedStatus(valeur) est "checked", $checkedAttribute prendra la valeur 'checked', sinon elle sera vide
+        //=== comparaison stricte - $checkedstatus = checked ?=alors 'checked'(case chacké) :=sinon '' (rien)
         // Ajouter la case à cocher HTML à la sortie
         $htmlSortie .= "<label>";
         $htmlSortie .= "<input type='checkbox' name='$label' $checkedAttribute> $label";
