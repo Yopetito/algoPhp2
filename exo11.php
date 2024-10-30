@@ -1,4 +1,4 @@
-<h1>Exercice 10</h1>
+<h1>Exercice 11</h1>
 
 <p>Ecrire une fonction personnalisée qui affiche une date en français (en toutes lettres) à partir d'une<br> 
 chaîne de caractère représentant une date.<br>
