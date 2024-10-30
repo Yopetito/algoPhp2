@@ -19,23 +19,23 @@ $job = ["Dév Web", "Intégrateur", "Chef de projet"];
 echo afficherform($info, $radio, $job);
 
 function afficherform($champDeTexte, $radio, $menuDeroulant){
-$form = "<form action='' method='post'>";
-//creation de champ de texte
-$form .= formTexte($champDeTexte);
-//creation de radio
-$form .= formRadio($radio);
-//creation du menu deroulant
-$form .= formMenuDeroulant($menuDeroulant);
-//creation du bouton
-$form .= submitButton();
-$form .= "</form>";
+  $form = "<form action='' method='post'>";
+  //creation de champ de texte
+  $form .= formTexte($champDeTexte);
+  //creation de radio
+  $form .= formRadio($radio);
+  //creation du menu deroulant
+  $form .= formMenuDeroulant($menuDeroulant);
+  //creation du bouton
+  $form .= submitButton();
+  $form .= "</form>";
 return $form;
 }
 
 //fonction creation de champ de texte
 function formTexte($array) {
-    $affichage = "";
-    foreach ($array as $value) {
+  $affichage = "";
+  foreach ($array as $value) {
         $case = "<label for='$value'>$value</label><br>
                  <input type='text' id='$value' name='$value'><br>";
         $affichage .= $case;
