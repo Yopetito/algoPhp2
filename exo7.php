@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>Exercice 7</h1>
 
 <p>Créer une fonction personnalisée permettant de générer des cases à cocher. On pourra préciser<br>
