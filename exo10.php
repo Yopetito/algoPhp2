@@ -13,26 +13,21 @@ de validation (submit)
 <?php 
 
 //affichage du formulaire
-echo afficherform();
-
-function afficherform(){
-$form = "<form action='' method='post'>";
-
-//creation de champ de texte
 $info = ["Nom", "Prenom", "Adresse e-mail", "Ville"];
-$form .= formTexte($info);
-
-//creation de radio
-$sexe = ["Masculin", "Feminin", "Autre"];
-$form .= formRadio($sexe);
-
-//creation du menu deroulant
+$radio = ["Masculin", "Feminin", "Autre"];
 $job = ["Dév Web", "Intégrateur", "Chef de projet"];
-$form .= formMenuDeroulant($job);
+echo afficherform($info, $radio, $job);
 
+function afficherform($champDeTexte, $radio, $menuDeroulant){
+$form = "<form action='' method='post'>";
+//creation de champ de texte
+$form .= formTexte($champDeTexte);
+//creation de radio
+$form .= formRadio($radio);
+//creation du menu deroulant
+$form .= formMenuDeroulant($menuDeroulant);
 //creation du bouton
 $form .= submitButton();
-
 $form .= "</form>";
 return $form;
 }
