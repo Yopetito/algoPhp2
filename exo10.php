@@ -12,26 +12,32 @@ de validation (submit)
 
 <?php 
 
+//affichage du formulaire
 echo afficherform();
 
 function afficherform(){
 $form = "<form action='' method='post'>";
 
+//creation de champ de texte
 $info = ["Nom", "Prenom", "Adresse e-mail", "Ville"];
 $form .= formTexte($info);
 
+//creation de radio
 $sexe = ["Masculin", "Feminin", "Autre"];
 $form .= formRadio($sexe);
 
+//creation du menu deroulant
 $job = ["Dév Web", "Intégrateur", "Chef de projet"];
 $form .= formMenuDeroulant($job);
 
+//creation du bouton
 $form .= submitButton();
 
 $form .= "</form>";
 return $form;
 }
 
+//fonction creation de champ de texte
 function formTexte($array) {
     $affichage = "";
     foreach ($array as $value) {
@@ -42,6 +48,7 @@ function formTexte($array) {
 return $affichage;  
 }
 
+//fonction creation de radio
 function formRadio($array) {
   $affichage = "Sexe<br>";
   $name = "genre";
@@ -53,6 +60,7 @@ function formRadio($array) {
 return $affichage;
 }
 
+//fonction creation du menu deroulant
 function formMenuDeroulant($array){
   $label = "<label for='jobs'>Intitulé de formation:</label><br>";
   $sel = "<select name='jobs' id='jobs'>";
@@ -63,6 +71,7 @@ $sel .= "</select>";
 return $label . $sel; 
 }
 
+//fonction creation du bouton
 function submitButton(){
   $button = "<input type='submit' value='Submit'><br>";
 return $button;
